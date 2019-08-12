@@ -6,7 +6,7 @@ before_install:
   - docker build -t dtsuper3/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run dtsuper3/docker-react npm run test -- --watchAll=false --coverage
+  - docker run -e CI=true dtsuper3/docker-react npm run test
 
 
 
